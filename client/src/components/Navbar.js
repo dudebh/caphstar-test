@@ -5,7 +5,9 @@ export default function Navbar () {
     return(
         <nav className="navbar navbar-dark bg-primary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/" onClick={(e) => history.push('/')} >Informasi Sosial Media</a>
+                <a className="navbar-brand" href="/" onClick={(e) => {
+                    e.preventDefault()
+                    history.push('/')}} >Informasi Sosial Media</a>
             </div>
         </nav>
     )

@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {fetchSosialMedia, setDocument} from '../store/actionCreators'
 import ListSosmed from '../components/ListSosmed'
 import ListSosmedPrint from '../components/ListSosmedPrint'
+import SearchForm from '../components/SearchForm'
 
 export default function Home () {
     const history = useHistory()
@@ -27,6 +28,7 @@ export default function Home () {
         <>
             <div className="row">
                 <div className="col"><button className="btn btn-success" onClick={() => history.push('/add')}>Tambah Aplikasi</button></div>
+                <div className="col"><SearchForm/></div>
             </div>
             <div className="row">
                 <div className="col">

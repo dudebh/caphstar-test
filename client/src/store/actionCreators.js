@@ -39,6 +39,22 @@ export function fetchSosialMedia(){
     }
 }
 
+export function searchSosialMedia(keyword){
+    return (dispatch, getState) => {
+        axios({
+            url: baseUrl+`?pendiri=${keyword}`,
+            method: 'get'
+        })
+        .then(({data}) => {
+            console.log(data);
+            dispatch(setSosialMedia(data))
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+}
+
 export function addSosialMedia(payload){
     return (dispatch, getState) => {
         return axios({
